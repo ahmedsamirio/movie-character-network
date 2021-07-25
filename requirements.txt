@@ -18,3 +18,4 @@ six==1.16.0
 tenacity==8.0.1
 tqdm==4.61.2
 Werkzeug==2.0.1
+requests==2.24.0
