@@ -1,2 +1,2 @@
-web gunicorn characternetwork:app
+web: gunicorn characternetwork:app
 
