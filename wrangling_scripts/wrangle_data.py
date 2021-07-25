@@ -25,6 +25,9 @@ def return_figures(movie_file, movie_name):
     sents = sent_tokenize_script(text)
     dialogue = extract_dialogues(sents)
     dialogue_df = pd.DataFrame(dialogue, columns=['character', 'text'])
+
+    # change "-" in character names to " "
+    dialogue_df['character'] = dialogue_df['character'].str.replace("-", " ")
     
     # top characters lines count
     characters_lines = dialogue_df.character.value_counts()
