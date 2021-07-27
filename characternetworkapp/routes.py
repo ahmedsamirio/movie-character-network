@@ -17,11 +17,13 @@ def index():
 def plot_network():
     if request.method == "POST":
         movies = return_movies()
-        movie_file = get_movie_file(request.form['movie'])
-        figures = return_figures(movie_file, request.form['movie'])
-        ids = ['figure-{}'.format(i) for i, _ in enumerate(figures)]
+        if any(c.isalnum() for c in request.form['movie']):
+            movie_file = get_movie_file(request.form['movie'])
+            figures = return_figures(movie_file, request.form['movie'])
+            ids = ['figure-{}'.format(i) for i, _ in enumerate(figures)]
 
-        # Convert the plotly figures to JSON for javascript in html template
-        figuresJSON = json.dumps(figures, cls=plotly.utils.PlotlyJSONEncoder)
-
-    return render_template("index.html", movies=movies, ids=ids, figuresJSON=figuresJSON)
+            # Convert the plotly figures to JSON for javascript in html template
+            figuresJSON = json.dumps(figures, cls=plotly.utils.PlotlyJSONEncoder)
+            return render_template("index.html", movies=movies, ids=ids, figuresJSON=figuresJSON)
+        else:
+            return render_template("index.html", movies=movies, ids=[])
