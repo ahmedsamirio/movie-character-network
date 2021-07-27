@@ -6,63 +6,48 @@
 
 <title>Characters Networks</title>
 
-<!-- <style>
+<style>
 
-/*the container must be positioned relative:*/
-.autocomplete {
-  position: relative;
-  display: inline-block;
+#input {
+    border-radius: 0px;
+    background: #4a4a4a;
+    color: #96f226;
+    border: 1px solid #454545;
+    height: 0 0 30px;
 }
-
-input {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
-  font-size: 16px;
+#input:hover {
+    background: #656565
 }
-
-input[type=text] {
-  background-color: #f1f1f1;
-  width: 100%;
+#input:active {
+    box-shadow: 0 0 30px #132138
 }
-
-input[type=submit] {
-  background-color: DodgerBlue;
-  color: #fff;
-  cursor: pointer;
+#input:focus {
+    box-shadow: 0 0 30px #132138
 }
-
-.autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
-  top: 100%;
-  left: 0;
-  right: 0;
+.ui-tooltip {
+    background: #4a4a4a;
+    color: #132138;
+    border: 2px solid #454545;
+    border-radius: 0px;
+    box-shadow: 0 0
 }
-
-.autocomplete-items div {
-  padding: 10px;
-  cursor: pointer;
-  background-color: #fff; 
-  border-bottom: 1px solid #d4d4d4; 
+.ui-autocomplete {
+    background: #4a4a4a;
+    border-radius: 0px;
 }
-
-/*when hovering an item:*/
-.autocomplete-items div:hover {
-  background-color: #e9e9e9; 
+.ui-menu .ui-menu-item a {
+    color: #132138;
+    border-radius: 0px;
 }
-
-/*when navigating through the items using the arrow keys:*/
-.autocomplete-active {
-  background-color: DodgerBlue !important; 
-  color: #ffffff; 
+.ui-menu .ui-menu-item a:hover {
+    background: #656565;
+    color: #ffffff
+}
+.ui-menu .ui-menu-item a:active {
+    box-shadow: 0 0 30px #132138
 }
 </style>
- -->
+
 <!--import script files needed from plotly and bootstrap-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
