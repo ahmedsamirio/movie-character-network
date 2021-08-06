@@ -4,6 +4,8 @@
 
 <head>
 
+<meta charset="UTF-8">
+
 <title>Characters Networks</title>
 
 <style>
@@ -24,6 +26,7 @@
 #input:focus {
     box-shadow: 0 0 30px #132138
 }
+
 .ui-tooltip {
     background: #4a4a4a;
     color: #132138;
@@ -49,18 +52,18 @@
 </style>
 
 <!--import script files needed from plotly and bootstrap-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script><script src="bootstrap-autocomplete.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>      
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>   
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="//cdn.plot.ly/plotly-latest.min.js"></script><script src="bootstrap-autocomplete.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>      
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>   
 
 <!--autocomplete script-->
-<script src="bootstrap-autocomplete.min.js"></script>   
+<!-- <script src="bootstrap-autocomplete.min.js"></script>    -->
 
-<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css"/>  
+<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css"/>  
 
 </head>
 
@@ -68,7 +71,7 @@
 
 <!--navbar links-->     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-       <a class="navbar-brand" href="#">Movie Networks</a>
+       <a class="navbar-brand" href="#">Characters Networks</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" 
       data-target="#navbarTogglerDemo02" 
       aria-controls="navbarTogglerDemo02" aria-expanded="false" 
@@ -99,7 +102,7 @@
             <div class="col align-self-center">
                 <form role="form" method="POST" action="/">
                     <!-- <div class="autcomplete"> -->
-                        <input id="var-select" name="movie" type="text" class="form-control pull-right basicAutoComplete" placeholder="search for a movie">
+                        <input id="var-select" name="movie" type="text" class="form-control pull-right" placeholder="search for a movie">
                         <button type="submit" class="btn btn-inverse"> Load </button>
                     <!-- </div> -->
                 </form>
@@ -141,7 +144,7 @@
       $( function() {
         var availableTags = [
             {% for movie in movies %}
-                "{{movie}}",
+                "{{ movie }}",
             {% endfor %}
         ];
         $( "#var-select" ).autocomplete({
