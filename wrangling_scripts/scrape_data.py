@@ -80,20 +80,20 @@ if __name__ == "__main__":
 
     for p in paragraphs:
         relative_link = p.a['href']
-        if relative_link == "/Movie Scripts/Avventura, L' (The Adventure) Script.html":
-            search_title, save_title, script = get_script(relative_link)
-            if not script:
-                continue
+        search_title, save_title, script = get_script(relative_link)
+        if not script:
+            continue
 
-            # save script text
-            # clean save title from any punctuations that preven creating a filename
-            save_title = save_title[:-5].translate(str.maketrans('', '', string.punctuation)) + '.txt'
-            script_file = os.path.join(SCRIPTS_DIR, save_title)
-            with open(script_file, 'w', encoding='utf-8') as outfile:
-                outfile.write(script)
+        # clean save title from any punctuations that prevent creating a filename
+        save_title = save_title[:-5].translate(str.maketrans('', '', string.punctuation)) + '.txt'
+        script_file = os.path.join(SCRIPTS_DIR, save_title)
 
-            # save mapping of movie name with script text file
-            movies_files[search_title] = script_file
+        # save script text
+        with open(script_file, 'w', encoding='utf-8') as outfile:
+            outfile.write(script)
+
+        # save mapping of movie name with script text file
+        movies_files[search_title] = script_file
 
     # save mapping to a picke file for easy loading
     movies_files_pkl =  open(os.path.join(SCRIPTS_DIR, MOVIES), 'wb')
