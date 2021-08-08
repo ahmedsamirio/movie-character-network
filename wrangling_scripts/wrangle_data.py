@@ -44,6 +44,9 @@ def return_figures(movie_file, movie_name):
     # count exchanges
     pairs = pd.Series(pairs).value_counts()
     top_pairs = pairs[in_top_characters(pairs.index, top_characters)]
+    
+    # filter only one time exchanges as they might be faulty and won't add much
+    top_pairs = top_pairs[top_pairs > 1]
 
     # further filter characters to inlcude only that have edges
     pair_chars = set('-'.join(top_pairs.index).split('-'))
