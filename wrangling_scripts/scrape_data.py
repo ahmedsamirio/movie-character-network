@@ -41,7 +41,6 @@ def get_clean_title(name):
     return name
 
 
-
 def get_script(relative_link):
     search_title = relative_link.split('/')[-1]
     clean_title = get_clean_title(search_title)
@@ -66,7 +65,6 @@ def get_script(relative_link):
     else:
         print('%s is a pdf :(' % search_title)
         return None, None, None
-
 
 
 if __name__ == "__main__":

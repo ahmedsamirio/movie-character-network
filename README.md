@@ -1,0 +1,43 @@
+# Movie Character Networks
+
+A web app deployed on herkou that graphs a network of characters in a movie according to their interactions inferred from their dialogue in the movie script.
+
+## Installation
+
+All extra libraries required to run the app locally are present in `requirement.txt`, also all the nltk packages required are present in `nltk.txt`.
+
+There is a python virutal environment that you can activate directly using `source characternetworkenv/bin/activate`.
+
+## Project Motivation
+
+This is a little project that I did to learn more about deploying webapps, network graphs and nlp. I didn't aim to make a perfect application that correctly graphs interactions between characters in any movie script, nor do I think that it's possible since there are many variations in any given script that reduces the ability of hard rules to infer such interactions. 
+
+That doesn't mean that you can't dissect a single movie script and graph the interactions in a very meticulous way, but it rather restricts any thought that this dissection would generalize to every other script out there, as evident by this web app.
+
+This project is rather a fun way to look into the movies you love and see how they are different from each other using their network graphs, as some movies can have multiple storylines, which can be evident in their networks, like the movie "Babel" or "The Lord of The Rings: The Two Towers"
+
+<<IMAGE>>
+
+And some movies can be really centralized around one character like "Thor: Ragnarok".
+
+<<IMAGE>>
+
+## File Descriptions
+
+1. `characternetworkapp/`: A module for the flask web app
+2. `characternetworkenv/`: A python virutal environment the contains all dependencies
+3. `data/`: All the movie scripts downloaded from IMSDB
+4. `wrangling_scripts/`: A module containing scraping, text cleaning, network preparation and graphing functions
+5. `Procfile`: A file that tells heroku what do when starting the web app
+6. `characternetwork.py`: A script that runs the web app 
+7. `nltk.txt`: A text file containing the nltk downloadable packages for heroku
+8. `requirements.txt`: A text file containing the dependencies for running the web app
+
+## Usage
+
+You can tinker with the deployed web app in here https://movie-character-network.herokuapp.com/, and if you are up to it you can clone this repo and customize the web app's interface, or customize the network grapsh themselves or how they are made and run the web app locally.
+
+You can also read this blogpost if you want to understand more about the flow of the code.
+
+
+
