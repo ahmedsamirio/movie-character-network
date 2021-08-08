@@ -1,4 +1,4 @@
 *.ipynb
 old_data/
 dialogue_network.html
-
+characternetwork.py
