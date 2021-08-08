@@ -35,7 +35,9 @@ And some movies can be really centralized around one character like "Thor: Ragna
 
 ## Usage
 
-You can tinker with the deployed web app in here https://movie-character-network.herokuapp.com/, and if you are up to it you can clone this repo and customize the web app's interface, or customize the network grapsh themselves or how they are made and run the web app locally.
+You can tinker with the deployed web app in here https://movie-character-network.herokuapp.com/.
+
+If you are up to it you can clone this repo and customize the web app's interface, or customize the network grapsh themselves or how they are made and run the web app locally. However, in order to run the web app locally, you have to uncomment this line `app.run(host='0.0.0.0', port=3000, debug=True)` in `characternetwork.py1`.
 
 You can also read this blogpost if you want to understand more about the flow of the code.
 
