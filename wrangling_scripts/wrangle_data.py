@@ -22,8 +22,8 @@ def return_figures(movie_file, movie_name):
     text = clean_script_text(text)
     sents = sent_tokenize_script(text)
     dialogue = extract_dialogues(sents)
-    dialogue_df = dialogue_df[~dialogue_df.character.isin(['FADE TO BLACK', 'CUT TO'])]
     dialogue_df = pd.DataFrame(dialogue, columns=['character', 'text'])
+    dialogue_df = dialogue_df[~dialogue_df.character.isin(['FADE TO BLACK', 'CUT TO'])]
 
     # change "-" in character names to " "
     dialogue_df['character'] = dialogue_df['character'].str.replace("-", " ")
