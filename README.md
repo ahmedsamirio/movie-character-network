@@ -16,12 +16,12 @@ That doesn't mean that you can't dissect a single movie script and graph the int
 
 This project is rather a fun way to look into the movies you love and see how they are different from each other using their network graphs, as some movies can have multiple storylines, which can be evident in their networks, like the movie "Babel" or "The Lord of The Rings: The Two Towers"
 
-[babel](https://ahmedsamirio.github.io/images/network/babel.png)
-[lotr](https://ahmedsamirio.github.io/images/network/lotr.png)
+[babel](../images/babel.png)
+[lotr](../images/lotr.png)
 
 And some movies can be really centralized around one character like "Thor: Ragnarok".
 
-[thor](https://ahmedsamirio.github.io/images/network/thor.png)
+[thor](../images/thor.png)
 
 ## File Descriptions
 
