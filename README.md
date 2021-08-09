@@ -24,22 +24,20 @@ And some movies can be really centralized around one character like "Thor: Ragna
 
 ## File Descriptions
 
-1. `characternetworkapp/`: A module for the flask web app
-2. `characternetworkenv/`: A python virutal environment the contains all dependencies
+1. `moviemapsapp/`: A module for the flask web app
+2. `moviemapsenv/`: A python virutal environment the contains all dependencies
 3. `data/`: All the movie scripts downloaded from IMSDB
 4. `wrangling_scripts/`: A module containing scraping, text cleaning, network preparation and graphing functions
 5. `Procfile`: A file that tells heroku what do when starting the web app
-6. `characternetwork.py`: A script that runs the web app 
+6. `moviemaps.py`: A script that runs the web app 
 7. `nltk.txt`: A text file containing the nltk downloadable packages for heroku
 8. `requirements.txt`: A text file containing the dependencies for running the web app
 
 ## Usage
 
-You can tinker with the deployed web app in here https://movie-character-network.herokuapp.com/.
+You can tinker with the deployed web app in here https://movie-maps.herokuapp.com/.
 
-If you are up to it you can clone this repo and customize the web app's interface, or customize the network grapsh themselves or how they are made and run the web app locally. However, in order to run the web app locally, you have to uncomment this line `app.run(host='0.0.0.0', port=3000, debug=True)` in `characternetwork.py1`.
+If you are up to it you can clone this repo and customize the web app's interface, or customize the network grapsh themselves or how they are made and run the web app locally. However, in order to run the web app locally, you have to uncomment this line `app.run(host='0.0.0.0', port=3000, debug=True)` in `moviemaps.py`.
 
-You can also read this blogpost if you want to understand more about the flow of the code.
-
-
+You can also read this [blog post](https://ahmedsamirio.github.io/2021-8-9-Movie-Maps/) if you want to understand more about the flow of the code.
 
