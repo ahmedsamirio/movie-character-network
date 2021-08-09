@@ -1,4 +1,4 @@
-# Movie Character Networks
+# Movie Maps
 
 A web app deployed on herkou that graphs a network of characters in a movie according to their interactions inferred from their dialogue in the movie script.
 
