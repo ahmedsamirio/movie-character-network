@@ -2,4 +2,4 @@ from flask import Flask
 
 app = Flask(__name__, template_folder='templates')
 
-from characternetworkapp import routes
+from moviemapsapp import routes
