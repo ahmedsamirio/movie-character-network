@@ -1,4 +1,4 @@
-from characternetworkapp import app
+from moviemapsapp import app
 import json, plotly
 from flask import render_template, request
 from wrangling_scripts.wrangle_data import return_figures, return_movies, get_movie_file
