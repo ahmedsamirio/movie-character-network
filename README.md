@@ -40,5 +40,5 @@ You can tinker with the deployed web app in here https://movie-maps.herokuapp.co
 
 If you are up to it you can clone this repo and customize the web app's interface, or customize the network grapsh themselves or how they are made and run the web app locally. However, in order to run the web app locally, you have to uncomment this line `app.run(host='0.0.0.0', port=3000, debug=True)` in `moviemaps.py`.
 
-You can also read this [blog post](https://ahmedsamirio.github.io/2021-8-9-Movie-Maps/) if you want to understand more about the flow of the code.
+You can also read this [blog post](https://ahmedsamirio.github.io/Movie-Maps/) if you want to understand more about the flow of the code.
 
