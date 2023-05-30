@@ -1,5 +1,7 @@
 # Movie Maps
 
+![lotr](./images/lotr.png)
+
 A web app deployed on herkou that graphs a network of characters in a movie according to their interactions inferred from their dialogue in the movie script.
 
 ## Installation
